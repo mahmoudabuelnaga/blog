@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block message %}
+{% endblock message %}
+{% block content %}
+<form action="" method="POST">{% csrf_token %}
+    <h1>Are you went to delete '{{object.title}}'</h1>
+        {% buttons %}
+        <button type="submit" class="btn btn-outline-danger">Delete</button> | <a class="btn btn-outline-warning" role="button" href="{{object.get_absolute_url}}">cansle</a>
+
+    {% endbuttons %}
+
+</form>  
+
+{% endblock content %}
